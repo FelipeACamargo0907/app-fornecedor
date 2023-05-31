@@ -1,0 +1,28 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "nome": "Roberto",
+      "endereco": "Alguma Casa Por Ai, 777",
+      "telefone": "2131321312",
+      "email": "robertoempresario@empresarober.com"
+    },
+    {
+      "id": 2,
+      "nome": "a",
+      "email": "a",
+      "endereco": "aab",
+      "telefone": "a",
+      "isChecked": true
+    }
+  ],
+  "supplier": [
+    {
+      "id": "23791",
+      "name": "Jose",
+      "cidade": "itau",
+      "email": "josefazendeirocomercial@hotmail.com",
+      "telefone": "99284957"
+    }
+  ]
+}

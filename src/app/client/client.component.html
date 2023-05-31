@@ -1,5 +1,70 @@
 <div class="container text-center">
-    <div class="display-6">
-        Cadastro de Clientes
+    <div class="col-6 container text-center">
+        <form [formGroup]="formGroupClient">
+            <div class="mb-2">
+                <div class="display-6">
+                    Cadastro de Clientes
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="nome">Nome</span>
+                <input type="text" id="nome" formControlName="nome" class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="email">Email </span>
+                <input type="email" id="email" formControlName="email" class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="telefone">Telefone </span>
+                <input type="telefone" id="telefone" formControlName="telefone" class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="endereco">Endereço </span>
+                <input type="text" id="endereco" formControlName="endereco" class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group-text mb-3 justify-content-end">
+                <input class="form-check-input mt-0" type="checkbox" formControlName="isChecked"
+                    aria-label="Checkbox for following text input"> <label>Aceitar os <a
+                        href="https://www.youtube.com/watch?v=HREU8Qnd-bI" target="_blank">Termos e
+                        Condições</a></label>
+            </div>
+            <div class="mb-3 d-flex justify-content-end">
+                <button class="btn btn-primary me-2" (click)="save()"> salvar</button>
+                <button class="btn btn-primary" (click)="clean()">Limpar</button>
+            </div>
+        </form>
     </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Telefone</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let client of client">
+                <th scope="row">{{client.id}}</th>
+                <td>{{client.nome}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.endereco}}</td>
+                <td>{{client.telefone}}</td>
+                <td>
+                    <button class="btn btn-primary me-1" (click)="edit(client)">Editar</button>
+                    <button class="btn btn-primary" (click)="delete(client)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
