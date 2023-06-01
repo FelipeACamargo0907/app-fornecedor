@@ -1,7 +1,8 @@
 export interface Supplier {
     id : string;
-    name : string;
-    cidade : string;
+    nome : string;
     email : string;
     telefone : string;
+    produto : string;
+    setor : string;
 }

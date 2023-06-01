@@ -12,8 +12,19 @@ export class SupplierService {
 
   constructor(private http : HttpClient) { }
 
-  getClient() : Observable<Supplier[]>{
+  getSupplier() : Observable<Supplier[]>{
     return this.http.get<Supplier[]>(this.url);
   }
-
+  save(supplier : Supplier): Observable<Supplier>{
+    return this.http.post<Supplier>(this.url, supplier);
+  }
+  delete (supplier : Supplier): Observable<void>{
+    return this.http.delete<void>(`${this.url}/${supplier.id}`);
+  }
+  update (supplier : Supplier): Observable<Supplier>{
+    return this.http.put<Supplier>(`${this.url}/${supplier.id}`, supplier);
+  }
+  clean(supplier : Supplier): Observable<void>{
+    return this.http.delete<void>(`${this.url}/${supplier.id}`);
+  }
 }

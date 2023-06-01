@@ -5,24 +5,50 @@
       "nome": "Roberto",
       "endereco": "Alguma Casa Por Ai, 777",
       "telefone": "2131321312",
-      "email": "robertoempresario@empresarober.com"
+      "email": "robertoempresario@empresarober.com",
+      "genero": "masculo"
     },
     {
       "id": 2,
-      "nome": "a",
-      "email": "a",
-      "endereco": "aab",
-      "telefone": "a",
-      "isChecked": true
+      "nome": "Maria",
+      "endereco": "Essa casa mesmo, 357",
+      "telefone": "11888562",
+      "email": "maria@mariacliente.com",
+      "genero": "femino"
+    },
+    {
+      "id": 3,
+      "nome": "Jose",
+      "endereco": "Meio do mato, 002",
+      "telefone": "3323939",
+      "email": "Jose@clientejose.com",
+      "genero": "masculo"
     }
   ],
   "supplier": [
     {
-      "id": "23791",
-      "name": "Jose",
-      "cidade": "itau",
+      "id": "2",
+      "nome": "Jose",
       "email": "josefazendeirocomercial@hotmail.com",
-      "telefone": "99284957"
+      "telefone": "412213124",
+      "produto": "arroz do bom",
+      "setor": "melhor de todos"
+    },
+    {
+      "id": "3",
+      "nome": "Adolfo",
+      "email": "AdolfoEmails@gmail.com",
+      "telefone": "4821939",
+      "produto": "Bomba",
+      "setor": "..."
+    },
+    {
+      "id": "4",
+      "nome": "Joao do Carro",
+      "email": "joaocarrosbons@yahoo.com.br",
+      "telefone": "5444588",
+      "produto": "Corolla não roubado",
+      "setor": "carro👍"
     }
   ]
 }

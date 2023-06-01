@@ -13,6 +13,7 @@ export class ClientComponent {
   isEditing: boolean = false;
   formGroupClient: FormGroup;
   isChecked: boolean = false;
+  genero : any;
 
   constructor(private clientService: ClientService,
     private formBuilder: FormBuilder) {
@@ -22,6 +23,7 @@ export class ClientComponent {
       email: [''],
       endereco: [''],
       telefone: [''],
+      genero : [''],
       isChecked: ['', [Validators.required]],
     });
   }
@@ -51,6 +53,7 @@ export class ClientComponent {
               this.formGroupClient.reset();
               this.isEditing = false;
               this.isChecked = false;
+              this.genero='';
             }
           }
         )

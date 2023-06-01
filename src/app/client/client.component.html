@@ -30,6 +30,25 @@
                 <input type="text" id="endereco" formControlName="endereco" class="form-control"
                     aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
+            
+            <div class="input-group mb-4 align-items-center">
+                <span class="input-group-text">Gênero</span>
+                <div class="form-check form-check-inline align-items-center">
+                    <input class="form-check-input" type="radio" id="genero-masculino" value="Masculino" formControlName="genero">
+                    <label class="form-check-label" for="genero-masculino">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline align-items-center">
+                    <input class="form-check-input" type="radio" id="genero-feminino" value="Feminino" formControlName="genero">
+                    <label class="form-check-label" for="genero-feminino">Feminino</label>
+                </div>
+                <div class="form-check form-check-inline align-items-center">
+                    <input class="form-check-input" type="radio" id="genero-outro" value="Outro" formControlName="genero">
+                    <label class="form-check-label" for="genero-outro">Outro</label>
+                </div>
+            </div>
+            
+            
+            
             <div class="input-group-text mb-3 justify-content-end">
                 <input class="form-check-input mt-0" type="checkbox" formControlName="isChecked"
                     aria-label="Checkbox for following text input"> <label>Aceitar os <a
@@ -37,7 +56,7 @@
                         Condições</a></label>
             </div>
             <div class="mb-3 d-flex justify-content-end">
-                <button class="btn btn-primary me-2" (click)="save()"> salvar</button>
+                <button class="btn btn-success me-2" (click)="save()">Salvar</button>
                 <button class="btn btn-primary" (click)="clean()">Limpar</button>
             </div>
         </form>
@@ -50,6 +69,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Endereço</th>
                 <th scope="col">Telefone</th>
+                <th scope="col">Gênero</th>
             </tr>
         </thead>
 
@@ -60,9 +80,10 @@
                 <td>{{client.email}}</td>
                 <td>{{client.endereco}}</td>
                 <td>{{client.telefone}}</td>
+                <td>{{client.genero}}</td>
                 <td>
-                    <button class="btn btn-primary me-1" (click)="edit(client)">Editar</button>
-                    <button class="btn btn-primary" (click)="delete(client)">Excluir</button>
+                    <button class="btn btn-warning me-1" (click)="edit(client)">Editar</button>
+                    <button class="btn btn-danger" (click)="delete(client)">Excluir</button>
                 </td>
             </tr>
         </tbody>
